@@ -19,7 +19,7 @@ jsonptr = "0.4.7"
 serde = { version = "1.0.159", features = ["derive"] }
 serde_json = "1.0.95"
 thiserror = "1.0.40"
-treediff = { version = "4.0.2", features = ["with-serde-json"], optional = true }
+treediff = { version = "5.0.0", features = ["with-serde-json"], optional = true }
 utoipa = { version = "4.0", optional = true }
 salvo = { version = "0.67.1", features = ["oapi"], optional = true }
 

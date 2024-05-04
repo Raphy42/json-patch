@@ -149,6 +149,7 @@ impl std::ops::Deref for Patch {
 pub struct AddOperation {
     /// JSON-Pointer value [RFC6901](https://tools.ietf.org/html/rfc6901) that references a location
     /// within the target document where the operation is performed.
+    #[cfg_attr(feature = "salvo", salvo(schema(value_type = String)))]
     #[cfg_attr(feature = "utoipa", schema(value_type = String))]
     pub path: Pointer,
     /// Value to add to the target location.
