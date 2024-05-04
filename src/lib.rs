@@ -209,10 +209,12 @@ impl_display!(MoveOperation);
 pub struct CopyOperation {
     /// JSON-Pointer value [RFC6901](https://tools.ietf.org/html/rfc6901) that references a location
     /// to copy value from.
+    #[cfg_attr(feature = "salvo", schema(value_type = String))]
     #[cfg_attr(feature = "utoipa", schema(value_type = String))]
     pub from: Pointer,
     /// JSON-Pointer value [RFC6901](https://tools.ietf.org/html/rfc6901) that references a location
     /// within the target document where the operation is performed.
+    #[cfg_attr(feature = "salvo", schema(value_type = String))]
     #[cfg_attr(feature = "utoipa", schema(value_type = String))]
     pub path: Pointer,
 }
@@ -226,6 +228,7 @@ impl_display!(CopyOperation);
 pub struct TestOperation {
     /// JSON-Pointer value [RFC6901](https://tools.ietf.org/html/rfc6901) that references a location
     /// within the target document where the operation is performed.
+    #[cfg_attr(feature = "salvo", schema(value_type = String))]
     #[cfg_attr(feature = "utoipa", schema(value_type = String))]
     pub path: Pointer,
     /// Value to test against.
